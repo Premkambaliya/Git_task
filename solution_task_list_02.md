@@ -7,14 +7,16 @@
    git config --global user.name "Your Name"
    git config --global user.email "your-email@example.com"
    ```
-* set your name and email globally
+   ans:- git config globel using for configrution settings set and manage.
+
 
 3. Verify the configuration:
 
 ```
 git config --list
 ```
-* list all configuration:
+ans:- git config --list using for show a list in list our name ,email , path etc.
+
 
 ## **Task 2: Initialize a Repository**
 
@@ -25,11 +27,8 @@ mkdir MyProject
 cd MyProject
 git init
 ```
-* mkdir use for create new folder
-* cd use for specify file/folder
-* init for initialize repo
+ans:- mkdir using for make new folder and cd using for you go inside any folder and git init initilize your repo
 
-* Purpose: Initializes a ```.git``` folder to track changes.
 
 ## **Part 2: Basic Workflow**
 
@@ -40,7 +39,7 @@ git init
 ```
 echo "Hello Git" > file1.txt
 ```
-* create new file
+   ans:- echo using for make a new file and in file write a message
 
 2. Stage and commit the file:
 ```
@@ -48,8 +47,9 @@ git add file1.txt
 git commit -m "Initial commit: Added file1.txt"
 ```
 
-* add file in satge area
-* commit messeage
+   ans:- git add use for you add a file in repo but first you initilaizetion repo 
+   ans:- after git add you use git commit that useing for any message write in file in your repo
+
 
 ### **Task 4: Viewing Changes**
 
@@ -57,17 +57,15 @@ git commit -m "Initial commit: Added file1.txt"
 ```
 echo "Git is awesome!" >> file1.txt
 ```
-
-* modify the file1.txt
+   ans:- echo using for make a new file and in file write a message
 
 2. Check file status and differences:
 ```
 git status
 git diff
 ```
-* git status check the cutent state of your repository
-* inspect the difference before commiting
-
+   ans:- git status useing for cheak a status of your files
+ans:- git diff show changes between your working directory and the index or between commits. Use git diff to see unstaged changes and git diff --staged for staged ones. You compare commits or branches 
 
 ### **Task 5: Undoing Changes**
 1. Unstage a staged file:
@@ -92,20 +90,20 @@ git checkout -- file1.txt
 git checkout -b feature-branch
 ```
 
-* create new branch
+ans:- create new branch
 
 2. List branches:
 ```
 git branch
 ```
 
-* give list of branch
+ans:- that give branch list
 
 3. Rename a branch:
 ```
 git branch -m feature-branch feature-enhanced
 ```
-* chages branch name
+ans:- change branch name
 
 ### **Task 7: Merging Branches**
 
@@ -116,7 +114,6 @@ git branch -m feature-branch feature-enhanced
     git merge feature-enhanced
     ```
 
- * merge feature-enhamced to main
 
  ### **Task 8: Handling Merge Conflicts**
 
@@ -143,7 +140,7 @@ git commit
 ```
 git remote add origin https://github.com/your-username/repo.git
 ```
-* add remote of repositpry
+
 
 2.
 Verify the remote:
@@ -152,7 +149,6 @@ Verify the remote:
 git remote -v
 ```
 
-* verify the url og repo.
 
 ### **Task 10: Push and Pull**
 
@@ -162,7 +158,7 @@ git remote -v
 git push -u origin main
 ```
 
-* push file to your local to globle
+ans:- push file to your local to globle
 
 2. Pull changes from the remote:
 ```
@@ -175,7 +171,7 @@ git pull origin main
    ```bash
    git clone https://github.com/your-username/repo.git
    ```
- * This command copies the repository from the Remote server to Local Machine.
+ ans:- git clone copi any repository with help remote link
 
 ---
 
@@ -194,12 +190,6 @@ git pull origin main
    ```bash
    git stash drop
    ```
- *  git stash: Temporarily saves (or stashes) the changes made in the working directory and staging area, then reverts the files to the last committed state.
-   
-  * git stash apply: Applies the most recent stash (stash@{0}) back to the working directory without removing it from the stash list.
-
-* git stash drop: Removes the most recent stash (stash@{0}) from the stash list.
-   ```
 
 #### **Task 13: Tagging Commits**
 1. Create and annotate a tag:  
@@ -211,12 +201,6 @@ git pull origin main
    git push origin v1.0
    ```
  
- * git tag: This command creates a tag on the current commit.
-   -a v1.0: The -a flag specifies that you`re creatinf an annotated tag .The v1.0 is the name of the tag.
-
- *  -m "Version 1.0 release": This provides a message for the tag.
-
- *  git push origin v1.0: This command pushes the tag (v1.0) to the remote repository.
 
 #### **Task 14: Rewriting Commit History**
 1. Use interactive rebase to modify commit messages:  
@@ -225,8 +209,6 @@ git pull origin main
    ```
    - Replace `pick` with `edit` or `squash` as needed.
    
-  *  git rebase -i: The -i flag stand for Interactive rebaseb,which allows you to manipulate commits.
-   HEAD~3: HEAD~3 means 3 commits before the current commit.
 
 
 #### **Task 15: Cherry-Picking Commits**
@@ -234,8 +216,7 @@ git pull origin main
    ```bash
    git cherry-pick <commit-hash>
    ```
- * git cherry-pick <commit-hash>: This command takes the changes introduced by the commit with the specified <commit-hash> and applies those changes to your current working branch as a new commit. 
-   
+
 
 
 ### **Part 6: Collaboration**
@@ -245,6 +226,8 @@ git pull origin main
    ```bash
    git clone https://github.com/your-username/forked-repo.git
    ```
+    ans:- git clone copi any repository with help remote link
+
 2. Make changes and push them:  
    ```bash
    git checkout -b fix-typo
@@ -252,20 +235,28 @@ git pull origin main
    git commit -m "Fixed a typo"
    git push origin fix-typo
    ```
+    ans:- make new branch and switch branch
+
+    ans:- echo using for make a new file and in file write a message
+
+    ans:- after git add you use git commit that useing for any message write in file in your repo
+
+    ans:- git push use for push repo in github
+
 3. Open a pull request on GitHub.
-   *  Fork: Forking a repository on GitHub creates a copy of someone else's repository under your own GitHub account.
+   *  Fork: Forking a repository on GitHub creates a copy of someone repository in your own GitHub account.
 
-*   git clone <forked-repo-url>: This command clones your forked repository from GitHub to your local machine. 
+*   git clone <forked-repo-url>: This command clones your forked repository from GitHub to your local . 
 
- *  git checkout -b <branch-name> : This command creates a new branch and switches to it.
+ *  git checkout -b <branch-name> : This command creates a new branch and switches to that branch.
 
-  * echo "Typo Fixed" >> README.md: This command adds the text "Typo fixed" to the end of the README.md file.
+  * echo "Typo Fixed" >> README.md: This command add some text "Typo fixed" in README.md file.
 
   * git add README.md: Stages the README.md file for committ.
 
-  * git commit -m "Fixed a typo": Commits the staged changes, with a message.
+  * git commit -m "Fixed a typo": Commits changes with a message.
 
- *  git push origin fix-typo: This command pushes fix-typo branch and its changes the fork on GitHub.
+ *  git push origin fix-typo: This command pushes fix-typo branch and changes the fork on GitHub.
    
 
    #### **Task 17: Simulating Team Collaboration**
